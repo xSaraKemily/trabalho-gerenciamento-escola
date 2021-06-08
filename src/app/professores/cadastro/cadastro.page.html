@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cadastro de Professores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #professorForm="ngForm" novalidate>
+
+    <ion-item>
+      <ion-label position="floating">Nome: </ion-label>
+      <ion-input #nome="ngModel" type="text" [(ngModel)]="professor.nome" name="nome" required minlength="3"></ion-input>
+      <ion-text color="danger" *ngIf="nome.invalid && (nome.dirty || nome.touched)">
+        <small>
+          <span *ngIf="nome.errors.required">
+            O nome é obrigatório
+          </span>
+          <span *ngIf="nome.errors.minlength">
+            O nome deve ter no mínimo 5 caracteres
+          </span>
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Idade: </ion-label>
+      <ion-input #idade="ngModel" type="number" [(ngModel)]="professor.idade" name="idade" pattern="[0-9]+" required></ion-input>
+      <ion-text color="danger" *ngIf="idade.invalid && (idade.dirty || idade.touched)">
+        <small>
+          <span *ngIf="idade.errors.required">
+            A idade é obrigatória.
+          </span>
+          <span *ngIf="idade.errors.pattern">
+            A idade deve ser superior a zero.
+          </span>
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Disciplina:</ion-label>
+      <ion-select [(ngModel)]="professor.disciplinas" multiple="false" placeholder="Selecione a disciplina" name="disciplinas"  [compareWith]="compareWith">
+        <ion-select-option *ngFor="let e of disciplina" [value]="e">
+          {{e.nome}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Imagem (URL): </ion-label>
+      <ion-input #imagem="ngModel" type="url" [(ngModel)]="professor.imagem" name="imagem" required></ion-input>
+      <ion-text color="danger" *ngIf="imagem.invalid && (imagem.dirty || imagem.touched)">
+        <small>
+          <span *ngIf="imagem.errors.required">
+            A imagem é obrigatória.
+          </span>
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button (click)="salvar(professor)" [disabled]="professorForm.invalid" color="danger">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+  </form>
+</ion-content>

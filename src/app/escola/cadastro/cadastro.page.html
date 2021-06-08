@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cadastro de Escola</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #escolaForm="ngForm" novalidate>
+    <ion-item>
+      <ion-label position="floating">Nome:</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="escola.nome" required minlength="5" #campoNome="ngModel">
+      </ion-input>
+      <ion-text color="danger" *ngIf="campoNome.invalid && (campoNome.dirty || campoNome.touched)">
+        <small>
+          <span *ngIf="campoNome.errors.required">
+            O nome é obrigatório.
+          </span>
+          <span *ngIf="campoNome.errors.minlength">
+            O campo nome deve ter no mínimo 5 caracteres.
+          </span>
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button (click)="salvar()" [disabled]="escolaForm.invalid" color="danger">
+        <ion-icon name="checkmark-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+  </form>
+</ion-content>

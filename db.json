@@ -1,0 +1,174 @@
+{
+  "escola": [
+    {
+      "id": 1,
+      "nome": "E.E.B. Heriberto Hulse"
+    },
+    {
+      "nome": "E.E.B João Frassetto",
+      "id": 2
+    },
+    {
+      "nome": "Escola teste",
+      "id": 3
+    }
+  ],
+  "cursos": [
+    {
+      "id": 1,
+      "nome": "Sistemas de informação",
+      "cargaHoraria": 88,
+      "escola": {
+        "nome": "E.E.B João Frassetto",
+        "id": 2
+      }
+    },
+    {
+      "nome": "ED. Fisica",
+      "escola": {
+        "id": 1,
+        "nome": "E.E.B. Heriberto Hulse"
+      },
+      "cargaHoraria": 80,
+      "id": 2
+    }
+  ],
+  "aluno": [
+    {
+      "nome": "Sara kemily",
+      "cpf": "10548055980",
+      "disciplina": [
+        {
+          "nome": "Matematica",
+          "cursos": [
+            {
+              "id": 1,
+              "nome": "Sistemas de info",
+              "cargaHoraria": 88,
+              "escola": [
+                {
+                  "id": 1,
+                  "nome": "E.E.B. Heriberto Hulse"
+                }
+              ]
+            }
+          ],
+          "cargaHoraria": 50,
+          "id": 1
+        }
+      ],
+      "escola": {
+        "id": 1,
+        "nome": "E.E.B. Heriberto Hulse"
+      },
+      "id": 1,
+      "aprovado": true,
+      "disciplinas": {
+        "nome": "Matemática ",
+        "cursos": {
+          "nome": "ED. Fisica",
+          "escola": {
+            "id": 1,
+            "nome": "E.E.B. Heriberto Hulse"
+          },
+          "cargaHoraria": 80,
+          "id": 2
+        },
+        "cargaHoraria": 24,
+        "id": 1
+      }
+    },
+    {
+      "nome": "Luana",
+      "cpf": "13006405658",
+      "disciplinas": {
+        "nome": "Disciplina teste",
+        "cursos": {
+          "nome": "ED. Fisica",
+          "escola": {
+            "id": 1,
+            "nome": "E.E.B. Heriberto Hulse"
+          },
+          "cargaHoraria": 80,
+          "id": 2
+        },
+        "cargaHoraria": 12,
+        "id": 3
+      },
+      "aprovado": true,
+      "id": 2
+    }
+  ],
+  "disciplinas": [
+    {
+      "nome": "Matemática ",
+      "cursos": {
+        "nome": "ED. Fisica",
+        "escola": {
+          "id": 1,
+          "nome": "E.E.B. Heriberto Hulse"
+        },
+        "cargaHoraria": 80,
+        "id": 2
+      },
+      "cargaHoraria": 24,
+      "id": 1
+    },
+    {
+      "nome": "Disciplina teste",
+      "cursos": {
+        "nome": "ED. Fisica",
+        "escola": {
+          "id": 1,
+          "nome": "E.E.B. Heriberto Hulse"
+        },
+        "cargaHoraria": 80,
+        "id": 2
+      },
+      "cargaHoraria": 12,
+      "id": 3
+    }
+  ],
+  "professores": [
+    {
+      "id": 1,
+      "nome": "Andressiane",
+      "idade": 23,
+      "disciplinas": {
+        "nome": "Disciplina teste",
+        "cursos": {
+          "nome": "ED. Fisica",
+          "escola": {
+            "id": 1,
+            "nome": "E.E.B. Heriberto Hulse"
+          },
+          "cargaHoraria": 80,
+          "id": 2
+        },
+        "cargaHoraria": 12,
+        "id": 3
+      },
+      "imagem": "https://super.abril.com.br/wp-content/uploads/2018/07/566ee0ae82bee174ca0300dahomer-simpson.jpeg"
+    },
+    {
+      "nome": "Sara Kemily",
+      "idade": 20,
+      "disciplinas": {
+        "nome": "Matemática ",
+        "cursos": {
+          "nome": "ED. Fisica",
+          "escola": {
+            "id": 1,
+            "nome": "E.E.B. Heriberto Hulse"
+          },
+          "cargaHoraria": 80,
+          "id": 2
+        },
+        "cargaHoraria": 24,
+        "id": 1
+      },
+      "imagem": "https://observatoriog.bol.uol.com.br/wordpress/wp-content/uploads/2019/04/lisa-1.jpg",
+      "id": 2
+    }
+  ]
+}
