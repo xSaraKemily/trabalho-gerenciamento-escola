@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CursoService } from 'src/app/services/curso.service';
 import { Curso } from 'src/app/models/curso.interface';
-import { NavController } from '@ionic/angular';
+import { NavController, ToastController } from '@ionic/angular';
 import { Disciplina } from 'src/app/models/disciplina.interface';
 import { DisciplinaService } from 'src/app/services/disciplina.service';
 import { ActivatedRoute } from '@angular/router';
@@ -20,7 +20,8 @@ export class CadastroPage implements OnInit {
     private cursoService: CursoService,
     private disciplinaService: DisciplinaService,
     private navController: NavController,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private toast: ToastController
   ) {
     this.disciplina = {
       nome: '',
@@ -58,6 +59,14 @@ export class CadastroPage implements OnInit {
       .salvar(disciplina)
       .subscribe(() => {
         this.navController.navigateForward(['/disciplinas']);
+      },
+      (response) => {
+        this.toast.create({
+          message: 'Não foi possível salvar a disciplina.',
+          color: 'danger',
+          duration: 3000,
+          keyboardClose: true
+        }).then(t => t.present());
       });
   }
 

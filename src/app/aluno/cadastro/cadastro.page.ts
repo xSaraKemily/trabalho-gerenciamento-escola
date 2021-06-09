@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DisciplinaService } from 'src/app/services/disciplina.service';
 import { Disciplina } from 'src/app/models/disciplina.interface';
-import { NavController } from '@ionic/angular';
+import { NavController, ToastController } from '@ionic/angular';
 import { Aluno } from 'src/app/models/aluno.interface';
 import { AlunoService } from 'src/app/services/aluno.service';
 import { ActivatedRoute } from '@angular/router';
@@ -20,7 +20,8 @@ export class CadastroPage implements OnInit {
     private disciplinaService: DisciplinaService,
     private AlunoService: AlunoService,
     private navController: NavController,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private toast: ToastController
   ) {
     this.aluno = {
       nome: '',
@@ -55,12 +56,21 @@ export class CadastroPage implements OnInit {
   };
 
   async salvar(aluno: Aluno) {
-
     this.AlunoService
       .salvar(aluno)
-      .subscribe(() => {
+      .subscribe(
+        () => {
         this.navController.navigateForward(['/aluno']);
-      });
+      },
+      (response) => {
+        this.toast.create({
+          message: 'Não foi possível salvar o aluno.',
+          color: 'danger',
+          duration: 3000,
+          keyboardClose: true
+        }).then(t => t.present());
+      }
+      );
   }
 
 }

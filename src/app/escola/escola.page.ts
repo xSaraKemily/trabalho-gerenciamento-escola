@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 import { EscolaService } from '../services/escola.service';
 import { Escola } from '../models/escola.interface';
 
@@ -15,6 +15,7 @@ export class EscolaPage implements OnInit {
   constructor(
     private alertController: AlertController,
     private escolaService: EscolaService,
+    private toast: ToastController
   ) { }
 
   ngOnInit() {
@@ -66,6 +67,14 @@ export class EscolaPage implements OnInit {
 
     this.escolaService.excluir(escola).subscribe(() => {
       this.listar()
+    },
+    (response) => {
+      this.toast.create({
+        message: 'Não foi possível excluir a escola.',
+        color: 'danger',
+        duration: 3000,
+        keyboardClose: true
+      }).then(t => t.present());
     });
   }
 

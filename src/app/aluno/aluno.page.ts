@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlunoService } from '../services/aluno.service';
 import { Aluno } from '../models/aluno.interface';
-import { LoadingController, AlertController } from '@ionic/angular';
+import { LoadingController, AlertController, ToastController } from '@ionic/angular';
 import { BusyLoaderService } from '../services/busy-loader.service';
 
 @Component({
@@ -16,7 +16,8 @@ export class AlunosPage implements OnInit {
   constructor(
     private alunoService: AlunoService,
     private busyLoader: BusyLoaderService,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private toast: ToastController,
   ) { }
 
   ionViewWillEnter() {
@@ -67,11 +68,19 @@ export class AlunosPage implements OnInit {
   private async excluir(aluno: Aluno) {
     const busyLoader = await this.busyLoader.create('Excluíndo ...');
 
-    this.alunoService.excluir(aluno).subscribe(() => {
-      this.listar()
-      busyLoader.dismiss();
-    });
+    this.alunoService.excluir(aluno).subscribe(
+      () => {
+        this.listar()
+        busyLoader.dismiss()
+      },
+      (response) => {
+        this.toast.create({
+          message: 'Não foi possível excluir o aluno.',
+          color: 'danger',
+          duration: 3000,
+          keyboardClose: true
+        }).then(t => t.present());
+      }
+    );
   }
-
-
 }

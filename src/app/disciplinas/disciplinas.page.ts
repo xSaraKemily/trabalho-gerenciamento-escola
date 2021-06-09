@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DisciplinaService } from '../services/disciplina.service';
 import { Disciplina } from '../models/disciplina.interface';
-import { LoadingController, AlertController } from '@ionic/angular';
+import { LoadingController, AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-disciplinas',
@@ -14,7 +14,8 @@ export class DisciplinasPage implements OnInit {
 
   constructor(
     private disciplinaService: DisciplinaService,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private toast: ToastController
   ) { }
 
   ngOnInit() { }
@@ -66,6 +67,14 @@ export class DisciplinasPage implements OnInit {
 
     this.disciplinaService.excluir(disciplina).subscribe(() => {
       this.listar()
+    },
+    (response) => {
+      this.toast.create({
+        message: 'Não foi possível excluir a disciplina.',
+        color: 'danger',
+        duration: 3000,
+        keyboardClose: true
+      }).then(t => t.present());
     });
   }
 

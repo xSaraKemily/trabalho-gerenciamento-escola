@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CursoService } from '../services/curso.service';
 import { Curso } from '../models/curso.interface';
-import { LoadingController, AlertController } from '@ionic/angular';
+import { LoadingController, AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cursos',
@@ -14,7 +14,8 @@ export class CursosPage implements OnInit {
 
   constructor(
     private cursoService: CursoService,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private toast: ToastController
   ) { }
 
   ngOnInit() { }
@@ -62,9 +63,19 @@ export class CursosPage implements OnInit {
 
   private async excluir(curso: Curso) {
 
-    this.cursoService.excluir(curso).subscribe(() => {
-      this.listar()
-    });
+    this.cursoService.excluir(curso).subscribe(
+      () => {
+        this.listar()
+      },
+    (response) => {
+      this.toast.create({
+        message: 'Não foi possível excluir o curso.',
+        color: 'danger',
+        duration: 3000,
+        keyboardClose: true
+      }).then(t => t.present());
+    }
+    );
   }
 
 }

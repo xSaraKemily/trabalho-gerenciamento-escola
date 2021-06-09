@@ -7,10 +7,6 @@
     {
       "nome": "E.E.B João Frassetto",
       "id": 2
-    },
-    {
-      "nome": "Escola teste",
-      "id": 3
     }
   ],
   "cursos": [
@@ -64,7 +60,7 @@
         "nome": "E.E.B. Heriberto Hulse"
       },
       "id": 1,
-      "aprovado": true,
+      "aprovado": false,
       "disciplinas": {
         "nome": "Matemática ",
         "cursos": {
@@ -79,7 +75,7 @@
         "cargaHoraria": 24,
         "id": 1
       },
-      "imagem": "https://panoramafarmaceutico.com.br/wp-content/uploads/2020/01/icone-pessoa-png-4.png"
+      "imagem": "https://nerdspro.com.br/wp-content/uploads/2020/07/863135-930x620.jpg"
     },
     {
       "nome": "Luana",

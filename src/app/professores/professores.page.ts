@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfessorService } from '../services/professor.service';
 import { Professor } from '../models/professor.interface';
-import { LoadingController, AlertController } from '@ionic/angular';
+import { LoadingController, AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-professores',
@@ -14,7 +14,8 @@ export class ProfessoresPage implements OnInit {
 
   constructor(
     private professorService: ProfessorService,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private toast: ToastController
   ) { }
 
   ngOnInit() { }
@@ -64,6 +65,14 @@ export class ProfessoresPage implements OnInit {
 
     this.professorService.excluir(professor).subscribe(() => {
       this.listar()
+    },
+    (response) => {
+      this.toast.create({
+        message: 'Não foi possível excluir o professor.',
+        color: 'danger',
+        duration: 3000,
+        keyboardClose: true
+      }).then(t => t.present());
     });
   }
 
