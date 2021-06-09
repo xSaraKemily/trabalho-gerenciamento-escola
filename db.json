@@ -2,7 +2,7 @@
   "escola": [
     {
       "id": 1,
-      "nome": "E.E.B. Heriberto Hulse"
+      "nome": "E.E.B Heriberto Hulse"
     },
     {
       "nome": "E.E.B João Frassetto",
@@ -17,7 +17,7 @@
     {
       "id": 1,
       "nome": "Sistemas de informação",
-      "cargaHoraria": 88,
+      "cargaHoraria": 83,
       "escola": {
         "nome": "E.E.B João Frassetto",
         "id": 2
@@ -62,7 +62,7 @@
         "nome": "E.E.B. Heriberto Hulse"
       },
       "id": 1,
-      "aprovado": true,
+      "aprovado": false,
       "disciplinas": {
         "nome": "Matemática ",
         "cursos": {
@@ -97,6 +97,26 @@
       },
       "aprovado": true,
       "id": 2
+    },
+    {
+      "nome": "sara kemily",
+      "cpf": "14009889738",
+      "disciplinas": {
+        "nome": "Matemática ",
+        "cursos": {
+          "nome": "ED. Fisica",
+          "escola": {
+            "id": 1,
+            "nome": "E.E.B. Heriberto Hulse"
+          },
+          "cargaHoraria": 80,
+          "id": 2
+        },
+        "cargaHoraria": 24,
+        "id": 1
+      },
+      "aprovado": true,
+      "id": 3
     }
   ],
   "disciplinas": [
@@ -117,13 +137,13 @@
     {
       "nome": "Disciplina teste",
       "cursos": {
-        "nome": "ED. Fisica",
+        "id": 1,
+        "nome": "Sistemas de informação",
+        "cargaHoraria": 83,
         "escola": {
-          "id": 1,
-          "nome": "E.E.B. Heriberto Hulse"
-        },
-        "cargaHoraria": 80,
-        "id": 2
+          "nome": "E.E.B João Frassetto",
+          "id": 2
+        }
       },
       "cargaHoraria": 12,
       "id": 3
@@ -133,9 +153,9 @@
     {
       "id": 1,
       "nome": "Andressiane",
-      "idade": 23,
+      "idade": 24,
       "disciplinas": {
-        "nome": "Disciplina teste",
+        "nome": "Matemática ",
         "cursos": {
           "nome": "ED. Fisica",
           "escola": {
@@ -145,8 +165,8 @@
           "cargaHoraria": 80,
           "id": 2
         },
-        "cargaHoraria": 12,
-        "id": 3
+        "cargaHoraria": 24,
+        "id": 1
       },
       "imagem": "https://super.abril.com.br/wp-content/uploads/2018/07/566ee0ae82bee174ca0300dahomer-simpson.jpeg"
     },

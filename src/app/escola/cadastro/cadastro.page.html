@@ -25,11 +25,9 @@
       </ion-text>
     </ion-item>
 
-    <ion-fab vertical="bottom" horizontal="end">
-      <ion-fab-button (click)="salvar()" [disabled]="escolaForm.invalid" color="danger">
-        <ion-icon name="checkmark-outline"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
+    <section class="full-width">
+      <ion-button expand="full" color="secondary"  (click)="salvar()" [disabled]="escolaForm.invalid" color="danger">Salvar</ion-button>
+    </section>
 
   </form>
 </ion-content>
