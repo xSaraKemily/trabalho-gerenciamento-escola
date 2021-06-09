@@ -27,6 +27,13 @@
     </ion-item>
 
     <ion-item>
+      <br>
+      <ion-badge color="warning">Opcional</ion-badge>
+      <ion-label position="floating">Descrição: </ion-label>
+      <ion-input #descricao="ngModel" type="text" [(ngModel)]="curso.descricao" name="descricao" maxlength="50"></ion-input>
+    </ion-item>
+
+    <ion-item>
       <ion-label>Escola:</ion-label>
       <ion-select [(ngModel)]="curso.escola" multiple="false" placeholder="Selecione a escola"
         [compareWith]="compareWith" name="escola" >
@@ -46,6 +53,21 @@
           </span>
           <span *ngIf="cargaHoraria.errors.pattern">
             A carga horária deve ser superior a zero.
+          </span>
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">QTD. Alunos: </ion-label>
+      <ion-input #qtdAlunos="ngModel" type="number" [(ngModel)]="curso.qtdAlunos" name="cargaHoraria" required pattern="[1-30]+"></ion-input>
+      <ion-text color="danger" *ngIf="qtdAlunos.invalid && (qtdAlunos.dirty || qtdAlunos.touched)">
+        <small>
+          <span *ngIf="qtdAlunos.errors.required">
+            A quantidade de alunos é obrigatória.
+          </span>
+          <span *ngIf="qtdAlunos.errors.pattern">
+            A carga horária deve ser menor que 30.
           </span>
         </small>
       </ion-text>

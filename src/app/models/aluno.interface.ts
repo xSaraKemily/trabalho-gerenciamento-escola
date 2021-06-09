@@ -7,4 +7,5 @@ export interface Aluno {
     cpf: string;
     aprovado: boolean;
     disciplinas: Disciplina;
+    imagem: string;
 }

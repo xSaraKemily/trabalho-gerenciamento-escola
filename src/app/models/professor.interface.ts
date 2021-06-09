@@ -6,4 +6,5 @@ export interface Professor {
     idade: number;
     disciplinas: Disciplina;
     imagem: string;
+    cpf: string;
 }

@@ -54,6 +54,14 @@
     </ion-item>
 
     <ion-item>
+      <br>
+      <ion-badge color="warning">Opcional</ion-badge>
+      <ion-label position="floating">Foto (URL): </ion-label>
+      <ion-input #imagem="ngModel" type="url" [(ngModel)]="aluno.imagem" name="imagem" required></ion-input>
+      <ion-text color="danger" *ngIf="imagem.invalid && (imagem.dirty || imagem.touched)"> </ion-text>
+    </ion-item>
+
+    <ion-item>
       <ion-label position="floating">Aprovado: </ion-label>
       <ion-checkbox #aprovado="ngModel" checked="false" [(ngModel)]="aluno.aprovado" name="aprovado" color="danger"></ion-checkbox>
     </ion-item>

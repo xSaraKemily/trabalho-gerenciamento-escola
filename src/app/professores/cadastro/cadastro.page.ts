@@ -25,6 +25,7 @@ export class CadastroPage implements OnInit {
     this.professor = {
       nome: '',
       idade: 0,
+      cpf: '',
       disciplinas: null,
       imagem: ''
     };

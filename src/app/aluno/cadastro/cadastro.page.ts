@@ -25,6 +25,7 @@ export class CadastroPage implements OnInit {
     this.aluno = {
       nome: '',
       cpf: '',
+      imagem: '',
       disciplinas: null,
       aprovado: true
     };

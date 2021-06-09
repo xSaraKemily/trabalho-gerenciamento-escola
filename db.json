@@ -2,7 +2,7 @@
   "escola": [
     {
       "id": 1,
-      "nome": "E.E.B Heriberto Hulse"
+      "nome": "E.E.B. Heriberto Hulse"
     },
     {
       "nome": "E.E.B João Frassetto",
@@ -17,11 +17,13 @@
     {
       "id": 1,
       "nome": "Sistemas de informação",
-      "cargaHoraria": 83,
+      "cargaHoraria": 2,
       "escola": {
         "nome": "E.E.B João Frassetto",
         "id": 2
-      }
+      },
+      "descricao": "saasas",
+      "qtdAlunos": 12
     },
     {
       "nome": "ED. Fisica",
@@ -62,7 +64,7 @@
         "nome": "E.E.B. Heriberto Hulse"
       },
       "id": 1,
-      "aprovado": false,
+      "aprovado": true,
       "disciplinas": {
         "nome": "Matemática ",
         "cursos": {
@@ -76,7 +78,8 @@
         },
         "cargaHoraria": 24,
         "id": 1
-      }
+      },
+      "imagem": "https://panoramafarmaceutico.com.br/wp-content/uploads/2020/01/icone-pessoa-png-4.png"
     },
     {
       "nome": "Luana",
@@ -96,27 +99,8 @@
         "id": 3
       },
       "aprovado": true,
-      "id": 2
-    },
-    {
-      "nome": "sara kemily",
-      "cpf": "14009889738",
-      "disciplinas": {
-        "nome": "Matemática ",
-        "cursos": {
-          "nome": "ED. Fisica",
-          "escola": {
-            "id": 1,
-            "nome": "E.E.B. Heriberto Hulse"
-          },
-          "cargaHoraria": 80,
-          "id": 2
-        },
-        "cargaHoraria": 24,
-        "id": 1
-      },
-      "aprovado": true,
-      "id": 3
+      "id": 2,
+      "imagem": "https://panoramafarmaceutico.com.br/wp-content/uploads/2020/01/icone-pessoa-png-4.png"
     }
   ],
   "disciplinas": [
@@ -135,15 +119,15 @@
       "id": 1
     },
     {
-      "nome": "Disciplina teste",
+      "nome": "Disciplina teste 1",
       "cursos": {
-        "id": 1,
-        "nome": "Sistemas de informação",
-        "cargaHoraria": 83,
+        "nome": "ED. Fisica",
         "escola": {
-          "nome": "E.E.B João Frassetto",
-          "id": 2
-        }
+          "id": 1,
+          "nome": "E.E.B. Heriberto Hulse"
+        },
+        "cargaHoraria": 80,
+        "id": 2
       },
       "cargaHoraria": 12,
       "id": 3
@@ -153,9 +137,9 @@
     {
       "id": 1,
       "nome": "Andressiane",
-      "idade": 24,
+      "idade": 23,
       "disciplinas": {
-        "nome": "Matemática ",
+        "nome": "Disciplina teste",
         "cursos": {
           "nome": "ED. Fisica",
           "escola": {
@@ -165,10 +149,11 @@
           "cargaHoraria": 80,
           "id": 2
         },
-        "cargaHoraria": 24,
-        "id": 1
+        "cargaHoraria": 12,
+        "id": 3
       },
-      "imagem": "https://super.abril.com.br/wp-content/uploads/2018/07/566ee0ae82bee174ca0300dahomer-simpson.jpeg"
+      "imagem": "https://super.abril.com.br/wp-content/uploads/2018/07/566ee0ae82bee174ca0300dahomer-simpson.jpeg",
+      "cpf": "12233444543"
     },
     {
       "nome": "Sara Kemily",

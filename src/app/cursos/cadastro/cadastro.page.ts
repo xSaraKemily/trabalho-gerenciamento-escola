@@ -25,7 +25,9 @@ export class CadastroPage implements OnInit {
     this.curso = {
       nome: '',
       escola: null,
-      cargaHoraria: 0
+      cargaHoraria: 0,
+      qtdAlunos: 0,
+      descricao: '',
     };
   }
 

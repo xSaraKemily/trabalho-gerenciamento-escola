@@ -13,8 +13,11 @@
   <ion-list>
     <ion-item-sliding *ngFor="let aluno of alunos">
       <ion-item>
-        <ion-label>
+        <ion-thumbnail slot="start">
+          <ion-img [src]="aluno.imagem"></ion-img>
+        </ion-thumbnail>
 
+        <ion-label>
           <h2>{{aluno.nome}}</h2>
           <h2>CPF: <ion-text color="medium"> {{aluno.cpf}}</ion-text></h2>
 

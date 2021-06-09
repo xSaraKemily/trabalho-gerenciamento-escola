@@ -5,4 +5,6 @@ export interface Curso {
     nome: string;
     cargaHoraria: number;
     escola: Escola;
+    qtdAlunos: number;
+    descricao: string;
 }
