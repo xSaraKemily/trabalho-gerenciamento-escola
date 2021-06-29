@@ -24,7 +24,7 @@ export class AlunosPage implements OnInit {
     this.listar();
   }
 
-  setFiltered(ev: any){
+   setFiltered(ev: any){
     let val = ev.target.value;
 
     if (val && val.trim() !== '') {

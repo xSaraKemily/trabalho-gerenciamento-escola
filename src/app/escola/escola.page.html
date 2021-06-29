@@ -8,13 +8,17 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFiltered($event)"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFiltered($event)" placeholder="Filtrar"></ion-searchbar>
   
   <ion-list>
     <ion-item-sliding *ngFor="let e of escola">
       <ion-item>
         <ion-label>
           <h2>{{e.nome}}</h2>
+          <h2>Email: <ion-text color="medium"> {{e.email}}</ion-text></h2>
+
+          <h2>Endereço:   <ion-text color="medium">{{e.endereco}} </ion-text></h2>
+
         </ion-label>
       </ion-item>
 

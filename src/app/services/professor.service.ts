@@ -7,9 +7,9 @@ import { Professor } from '../models/professor.interface';
 })
 export class ProfessorService {
 
-  // private URL = 'http://localhost:8079/api/resources/professores';
+  private URL = 'http://localhost:8080/gerenciamentoEscola-1.0.0/api/professores';
 
-  private URL = 'http://localhost:3000/professores';
+  // private URL = 'http://localhost:3000/professores';
 
   constructor(private httpClient:HttpClient) { }
 

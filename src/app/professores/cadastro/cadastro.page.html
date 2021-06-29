@@ -27,18 +27,10 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Idade: </ion-label>
-      <ion-input #idade="ngModel" type="number" [(ngModel)]="professor.idade" name="idade" pattern="[0-9]+" required></ion-input>
-      <ion-text color="danger" *ngIf="idade.invalid && (idade.dirty || idade.touched)">
-        <small>
-          <span *ngIf="idade.errors.required">
-            A idade é obrigatória.
-          </span>
-          <span *ngIf="idade.errors.pattern">
-            A idade deve ser superior a zero.
-          </span>
-        </small>
-      </ion-text>
+      <br>
+      <ion-badge color="warning">Opcional</ion-badge>
+      <ion-label position="floating">Endereço: </ion-label>
+      <ion-input #endereco="ngModel" type="text" [(ngModel)]="professor.endereco" name="endereco"></ion-input>
     </ion-item>
 
     <ion-item>

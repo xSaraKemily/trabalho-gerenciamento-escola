@@ -60,13 +60,13 @@
 
     <ion-item>
       <ion-label position="stacked">QTD. Alunos: </ion-label>
-      <ion-input #qtdAlunos="ngModel" type="number" [(ngModel)]="curso.qtdAlunos" name="cargaHoraria" required pattern="[1-30]+"></ion-input>
-      <ion-text color="danger" *ngIf="qtdAlunos.invalid && (qtdAlunos.dirty || qtdAlunos.touched)">
+      <ion-input #quantidadeAlunos="ngModel" type="number" [(ngModel)]="curso.quantidadeAlunos" name="quantidadeAlunos" required></ion-input>
+      <ion-text color="danger" *ngIf="quantidadeAlunos.invalid && (quantidadeAlunos.dirty || quantidadeAlunos.touched)">
         <small>
-          <span *ngIf="qtdAlunos.errors.required">
+          <span *ngIf="quantidadeAlunos.errors.required">
             A quantidade de alunos é obrigatória.
           </span>
-          <span *ngIf="qtdAlunos.errors.pattern">
+          <span *ngIf="quantidadeAlunos.errors.pattern">
             A carga horária deve ser menor que 30.
           </span>
         </small>

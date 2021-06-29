@@ -64,7 +64,7 @@ export class CadastroPage implements OnInit {
       },
       (response) => {
         this.toast.create({
-          message: 'Não foi possível salvar o aluno.',
+          message: response.error ? response.error : 'Não foi possível salvar o aluno.',
           color: 'danger',
           duration: 3000,
           keyboardClose: true

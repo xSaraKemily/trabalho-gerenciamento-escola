@@ -1,21 +1,28 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Aluno } from '../models/aluno.interface';
 
 @Injectable({providedIn: 'root'})
 
 export class AlunoService {
 
-  // private URL = 'http://localhost:8079/api/resources/alunos';
+  private URL = 'http://localhost:8080/gerenciamentoEscola-1.0.0/api/alunos';
 
-  private URL = 'http://localhost:3000/aluno';
+  // private URL = 'http://localhost:3000/aluno';
 
   constructor(
     private httpClient:HttpClient
   ) { }
 
-  getAlunos() {
+  getAlunos(value: string = 'tudo') {
+    // let params = new HttpParams().set('query', value);
+
     return this.httpClient.get<Aluno[]>(this.URL);
+
+    // return this.httpClient.get<Aluno[]>(this.URL, {
+    //   params: params,
+    //   headers: new HttpHeaders({'Content-Type': 'application/json'})
+    // });
   }
 
   excluir(aluno: Aluno) {
@@ -41,5 +48,4 @@ export class AlunoService {
   getAluno(id: number) {
     return this.httpClient.get<Aluno>(`${this.URL}/${id}`);
   }
-
 }

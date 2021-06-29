@@ -25,7 +25,7 @@ export class CadastroPage implements OnInit {
   ) {
     this.professor = {
       nome: '',
-      idade: 0,
+      endereco: '',
       cpf: '',
       disciplinas: null,
       imagem: ''
@@ -64,7 +64,7 @@ export class CadastroPage implements OnInit {
       },
       (response) => {
         this.toast.create({
-          message: 'Não foi possível salvar o professor.',
+          message: response.error ? response.error : 'Não foi possível salvar o professor.',
           color: 'danger',
           duration: 3000,
           keyboardClose: true

@@ -27,7 +27,7 @@ export class CadastroPage implements OnInit {
       nome: '',
       escola: null,
       cargaHoraria: 0,
-      qtdAlunos: 0,
+      quantidadeAlunos: 0,
       descricao: '',
     };
   }

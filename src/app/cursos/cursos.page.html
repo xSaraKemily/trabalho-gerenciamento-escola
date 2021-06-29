@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFiltered($event)"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFiltered($event)" placeholder="Filtrar"></ion-searchbar>
   
   <ion-list>
     <ion-item-sliding *ngFor="let curso of cursos">

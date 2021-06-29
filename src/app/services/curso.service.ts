@@ -6,9 +6,9 @@ import { Curso } from '../models/curso.interface';
 
 export class CursoService {
 
-  // private URL = 'http://localhost:8079/book-api/resources/cursos';
+  private URL = 'http://localhost:8080/gerenciamentoEscola-1.0.0/api/cursos';
 
-  private URL = 'http://localhost:3000/cursos';
+  // private URL = 'http://localhost:3000/cursos';
 
   constructor(
     private httpClient:HttpClient

@@ -25,6 +25,39 @@
       </ion-text>
     </ion-item>
 
+    <ion-item>
+      <ion-label position="floating">Endereço:</ion-label>
+      <ion-input type="text" name="endereco" [(ngModel)]="escola.endereco" required minlength="5" #endereco="ngModel">
+      </ion-input>
+      <ion-text color="danger" *ngIf="endereco.invalid && (endereco.dirty || endereco.touched)">
+        <small>
+          <span *ngIf="endereco.errors.required">
+            O endereco é obrigatório.
+          </span>
+          <span *ngIf="endereco.errors.minlength">
+            O campo endereco deve ter no mínimo 10 caracteres.
+          </span>
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email:</ion-label>
+      <ion-input type="email" name="email" [(ngModel)]="escola.email" required minlength="10" #email="ngModel"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <br>
+      <ion-badge color="warning">Opcional</ion-badge>
+      <ion-label position="floating">Telefone:</ion-label>
+      <ion-input type="text" name="telefone" [(ngModel)]="escola.telefone" minlength="9" #telefone="ngModel"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Site:</ion-label>
+      <ion-input type="text" name="site" [(ngModel)]="escola.site" required minlength="10" #endereco="ngModel"></ion-input>
+    </ion-item>
+
     <section class="full-width">
       <ion-button expand="full" color="secondary"  (click)="salvar()" [disabled]="escolaForm.invalid" color="danger">Salvar</ion-button>
     </section>

@@ -31,74 +31,7 @@
       "id": 2
     }
   ],
-  "aluno": [
-    {
-      "nome": "Sara kemily",
-      "cpf": "10548055980",
-      "disciplina": [
-        {
-          "nome": "Matematica",
-          "cursos": [
-            {
-              "id": 1,
-              "nome": "Sistemas de info",
-              "cargaHoraria": 88,
-              "escola": [
-                {
-                  "id": 1,
-                  "nome": "E.E.B. Heriberto Hulse"
-                }
-              ]
-            }
-          ],
-          "cargaHoraria": 50,
-          "id": 1
-        }
-      ],
-      "escola": {
-        "id": 1,
-        "nome": "E.E.B. Heriberto Hulse"
-      },
-      "id": 1,
-      "aprovado": false,
-      "disciplinas": {
-        "nome": "Matemática ",
-        "cursos": {
-          "nome": "ED. Fisica",
-          "escola": {
-            "id": 1,
-            "nome": "E.E.B. Heriberto Hulse"
-          },
-          "cargaHoraria": 80,
-          "id": 2
-        },
-        "cargaHoraria": 24,
-        "id": 1
-      },
-      "imagem": "https://nerdspro.com.br/wp-content/uploads/2020/07/863135-930x620.jpg"
-    },
-    {
-      "nome": "Luana",
-      "cpf": "13006405658",
-      "disciplinas": {
-        "nome": "Disciplina teste",
-        "cursos": {
-          "nome": "ED. Fisica",
-          "escola": {
-            "id": 1,
-            "nome": "E.E.B. Heriberto Hulse"
-          },
-          "cargaHoraria": 80,
-          "id": 2
-        },
-        "cargaHoraria": 12,
-        "id": 3
-      },
-      "aprovado": true,
-      "id": 2,
-      "imagem": "https://panoramafarmaceutico.com.br/wp-content/uploads/2020/01/icone-pessoa-png-4.png"
-    }
-  ],
+  "aluno": [],
   "disciplinas": [
     {
       "nome": "Matemática ",
@@ -127,6 +60,22 @@
       },
       "cargaHoraria": 12,
       "id": 3
+    },
+    {
+      "nome": "sasasasas",
+      "cursos": {
+        "id": 1,
+        "nome": "Sistemas de informação",
+        "cargaHoraria": 2,
+        "escola": {
+          "nome": "E.E.B João Frassetto",
+          "id": 2
+        },
+        "descricao": "saasas",
+        "qtdAlunos": 12
+      },
+      "cargaHoraria": 2,
+      "id": 4
     }
   ],
   "professores": [

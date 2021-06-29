@@ -6,8 +6,8 @@ import { Disciplina } from '../models/disciplina.interface';
 
 export class DisciplinaService {
 
-  // private URL = 'http://localhost:8079/api/resources/disciplinas';
-  private URL = 'http://localhost:3000/disciplinas';
+  private URL = 'http://localhost:8080/gerenciamentoEscola-1.0.0/api/disciplinas';
+  // private URL = 'http://localhost:3000/disciplinas';
 
   constructor(private httpClient:HttpClient) { }
 

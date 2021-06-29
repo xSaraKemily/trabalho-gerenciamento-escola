@@ -19,7 +19,13 @@ export class CadastroPage implements OnInit {
     private loadingController : LoadingController,
     private activatedRoute : ActivatedRoute,
   ) {
-    this.escola = { nome: '' };
+    this.escola = { 
+      nome: '',
+      endereco: '',
+      telefone: '',
+      email: '',
+      site: ''
+     };
   }
 
   async ngOnInit() {

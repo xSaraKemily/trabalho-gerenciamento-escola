@@ -7,9 +7,9 @@ import { Escola } from '../models/escola.interface';
 })
 export class EscolaService {
 
-  // private URL = 'http://localhost:8079/api/resources/escola';
+  private URL = 'http://localhost:8080/gerenciamentoEscola-1.0.0/api/escola';
 
-  private URL = 'http://localhost:3000/escola';
+  // private URL = 'http://localhost:3000/escola';
 
   constructor(private httpClient : HttpClient) { }
 

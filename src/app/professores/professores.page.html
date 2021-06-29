@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFiltered($event)"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFiltered($event)" placeholder="Filtrar"></ion-searchbar>
 
   <ion-list>
     <ion-item-sliding *ngFor="let professor of professores">
@@ -19,7 +19,7 @@
         <ion-label>
           <h2>{{professor.nome}}</h2>
           <h3>
-            Idade: <ion-text color="medium">{{professor.idade}}</ion-text>
+            CPF: <ion-text color="medium">{{professor.cpf}}</ion-text>
           </h3>
           <h3>Disciplina:<ion-text color="medium">{{professor.disciplinas.nome}}</ion-text></h3>
         </ion-label>
